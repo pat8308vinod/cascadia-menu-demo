@@ -1,0 +1,11 @@
+.home-get-help-section-wrap {
+    h4 {
+        color: var(--casc-blue-darker);
+        font-size: rem-calc(32);
+        line-height: rem-calc(40);
+        @include media-breakpoint-down(md) {
+            font-size: rem-calc(36);
+            line-height: rem-calc(45);
+        }
+    }
+}

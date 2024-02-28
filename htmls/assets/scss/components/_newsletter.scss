@@ -1,0 +1,12 @@
+.newsletter-desc {
+    font-size: rem-calc(18);
+    @include media-breakpoint-down(md) {
+        font-size: rem-calc(16);
+    }
+}
+.newsletter-block {
+    color: var(--casc-white);
+    h4 {
+        margin-bottom: rem-calc(16);
+    }
+}

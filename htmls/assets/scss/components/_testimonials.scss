@@ -1,0 +1,54 @@
+.cascadia-testimonials-section-wrap {
+  background: var(--casc-blue-dark-1);
+  padding: rem-calc(50 0);
+  color: #fff;
+  margin-bottom: rem-calc(100);
+  @include media-breakpoint-down(md) {
+    margin-bottom: rem-calc(60);
+    padding: rem-calc(40 0);
+  }
+}
+.cascadia-testimonial {
+  text-align: center;
+  blockquote {
+    margin-bottom: 0;
+    img {
+      border-radius: rem-calc(10);
+      @include media-breakpoint-down(md) {
+        margin-bottom: rem-calc(30);
+      }
+    }
+  }
+  h3 {
+    font-family: var(--heading-font-family) !important;
+    font-weight: $bold !important;
+    font-size: rem-calc(36) !important;
+    line-height: rem-calc(45);
+    margin-bottom: rem-calc(33);
+    @include media-breakpoint-down(md) {
+      font-size: rem-calc(24) !important;
+      line-height: rem-calc(33);
+      font-weight: 500 !important;
+      margin-bottom: rem-calc(40);
+    }
+  }
+}
+
+.testimonils-mini {
+  position: relative;
+  background: var(--casc-white);
+  border-left: 12px solid var(--casc-green);
+  padding: rem-calc(16 60 20 24);
+  font-weight: $semibold;
+  font-size: rem-calc(16);
+  line-height: rem-calc(26);
+  color: var(--casc-blue-dark);
+  text-align: left;
+  margin-top: rem-calc(30);
+  @include media-breakpoint-up(lg) {
+    margin-top: rem-calc(55);
+    padding: rem-calc(16 50 32 24);
+    width: 90%;
+    margin-left: auto;
+  }
+}

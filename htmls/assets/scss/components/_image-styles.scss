@@ -1,0 +1,172 @@
+.content-img-wt-shadow {
+  position: relative;
+  box-shadow: -29px -27px 0 var(--casc-blue-light-1);
+  border-radius: rem-calc(100 0);
+
+  @include media-breakpoint-down(md) {
+    box-shadow: -12px -12px 0 var(--casc-blue-light-1);
+    border-radius: rem-calc(65 0);
+  }
+}
+
+.content-img-wt-shadow-blue {
+  position: relative;
+  border-left: 12px solid var(--casc-blue);
+  border-bottom: 12px solid var(--casc-blue);
+  border-radius: rem-calc(0 140);
+
+  @include media-breakpoint-down(md) {
+    box-shadow: -12px -12px 0 var(--casc-blue);
+    border-radius: rem-calc(140 0);
+  }
+}
+
+.content-img-wt-shadow-rectangle {
+  position: relative;
+  padding: rem-calc(75 0 56);
+  display: inline-flex;
+  @include media-breakpoint-down(md) {
+    padding: rem-calc(40 0 40);
+  }
+  &::before {
+    content: "";
+    background: var(--casc-blue-light-1);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: calc(100% - 240px);
+    height: 100%;
+    transform: translateX(-50%);
+    z-index: 0;
+    @include media-breakpoint-down(md) {
+      width: calc(100% - 100px);
+    }
+  }
+  > img {
+    position: relative;
+    border-radius: rem-calc(100 0);
+  }
+}
+
+.content-img-blue-shadow-rectangle {
+  position: relative;
+  padding: rem-calc(75 0 75);
+  display: inline-flex;
+  @include media-breakpoint-down(md) {
+    padding: rem-calc(40 0 40);
+  }
+
+  &::before {
+    content: "";
+    background: var(--casc-blue);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: calc(100% - 250px);
+    height: 100%;
+    transform: translateX(-50%);
+    z-index: 0;
+    @include media-breakpoint-down(md) {
+      width: calc(100% - 120px);
+    }
+  }
+  > .content-img-blue-shadow-rectangle-inner {
+    position: relative;
+    background: var(--casc-cyan-light-1);
+    min-width: 580px;
+    height: 400px;
+    @include media-breakpoint-down(md) {
+      min-width: 326px;
+      height: 240px;
+    }
+  }
+}
+
+.content-img-wt-border-blue {
+  border-top: 18px solid var(--casc-blue);
+  border-bottom: 18px solid var(--casc-blue);
+}
+.content-img-wt-top-border-blue {
+  border-top: 18px solid var(--casc-blue);
+}
+.award-section {
+  .two-columns-section-wrap {
+    .cascadia-slider-2 {
+      .carousel-inner {
+        .carousel-item {
+          height: auto;
+          margin-top: rem-calc(0);
+          @include media-breakpoint-down(md) {
+            margin-top: rem-calc(20);
+          }
+          img {
+            @include media-breakpoint-down(md) {
+              max-width: 75%;
+            }
+          }
+          p {
+            margin-top: rem-calc(20);
+          }
+        }
+      }
+      .carousel-control-prev {
+        svg {
+          path {
+            fill: var(--casc-black) !important;
+          }
+        }
+        left: rem-calc(50px);
+        @include media-breakpoint-down(md) {
+          left: rem-calc(-15px);
+        }
+      }
+      .carousel-control-next {
+        svg {
+          path {
+            fill: var(--casc-black) !important;
+          }
+        }
+        right: rem-calc(50px);
+        @include media-breakpoint-down(md) {
+          right: rem-calc(-15px);
+        }
+      }
+      .carousel-control-prev,
+      .carousel-control-next {
+        position: absolute !important;
+        top: 32%;
+        width: 56px;
+        height: 56px;
+        padding: 0;
+        background: var(--casc-blue-light-1);
+      }
+    }
+  }
+  .award {
+    flex-wrap: wrap;
+    .award-item {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      padding-left: rem-calc(0);
+      padding-right: rem-calc(0);
+      margin-bottom: rem-calc(0);
+    }
+    @include media-breakpoint-down(md) {
+      .award-item {
+        padding-left: rem-calc(12);
+        padding-right: rem-calc(12);
+        margin-bottom: rem-calc(32);
+        :last-child {
+          margin-bottom: rem-calc(0);
+        }
+      }
+    }
+  }
+}
+.border-radius-100{
+  border-radius: rem-calc(0) rem-calc(100) rem-calc(0) rem-calc(100) ;
+  @include media-breakpoint-down(md) {
+    border-radius: rem-calc(0) rem-calc(70) rem-calc(0) rem-calc(70) ;
+  }
+}

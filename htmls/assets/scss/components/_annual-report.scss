@@ -1,0 +1,119 @@
+.annul-report {
+  .annul-left-heading {
+    background: #be89a5;
+    margin-bottom: rem-calc(0);
+  }
+  .annual-report-content {
+    background: #4cadc9;
+    text-align: center;
+    margin-top: rem-calc(0);
+    padding: rem-calc(56);
+  }
+  .annual-report-bottom {
+    background: #f7be68;
+    display: flex;
+    padding-top: rem-calc(16);
+    padding-bottom: rem-calc(0);
+    justify-content: space-between;
+    @include media-breakpoint-down(md) {
+        flex-wrap: wrap;
+      }
+    .annual-report-bottom-item {
+      flex-grow: 1;
+      padding: 0 rem-calc(16);
+      justify-content: center;
+    }
+    h4 {
+      font-size: rem-calc(24) !important;
+      margin-bottom: rem-calc(0);
+    }
+  }
+  .cascadia-students-analytics{
+    border-top: none;
+  }
+}
+.team-details {
+  > div {
+    margin-bottom: rem-calc(48);
+    .team-details-item {
+      height: 100% !important;
+      width: 85%;
+      background: var(--casc-cyan-light-1);
+      border-top-right-radius: rem-calc(50);
+      border-top-left-radius: rem-calc(50);
+      margin: 0 auto;
+
+      > img {
+        border-top-right-radius: rem-calc(50);
+        border-top-left-radius: rem-calc(50);
+        border-bottom: 7px solid var(--casc-blue);
+        width: 100%;
+        max-height: rem-calc(320);
+      }
+      .team-desc {
+        background: var(--casc-cyan-light-1);
+        padding: rem-calc(24) rem-calc(20) rem-calc(16) rem-calc(20);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        p {
+          font-size: rem-calc(16);
+          line-height: rem-calc(26);
+        }
+      }
+    }
+  }
+}
+.newsletter-section {
+  form {
+    .row {
+      input {
+        height: rem-calc(58);
+        margin-bottom: rem-calc(32);
+        line-height: rem-calc(26);
+        font-size: rem-calc(16);
+        background: transparent;
+        border-radius: rem-calc(8);
+        color: var(--casc-white) !important;
+        &::placeholder {
+          color: var(--casc-white) !important;
+        }
+        &:focus {
+          background: transparent;
+        }
+      }
+    }
+  }
+}
+.connect-links {
+    a {
+        text-decoration: none;
+        font-family: var(--body-font-family) !important;
+        font-weight: 600 !important;
+        color: var(--casc-blue-dark);
+        font-size: 1.125rem;
+        line-height: 2rem;
+        padding-bottom: rem-calc(8);
+        display: block;
+        &:hover{
+          color: var(--casc-orange-1);
+        }
+        img{
+          margin-right: rem-calc(16);
+        }
+        span{
+          border-bottom: 2px solid var(--casc-sky-blue);
+          padding-bottom: rem-calc(2);
+        }
+      }
+    p{
+        font-family: var(--body-font-family) !important;
+        font-weight: 600 !important;
+        color: var(--casc-blue-dark);
+        font-size: 1.125rem;
+        line-height: 2rem;
+        img{
+            margin-right: rem-calc(16);
+          }
+    }
+}

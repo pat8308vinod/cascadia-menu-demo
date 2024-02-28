@@ -1,0 +1,194 @@
+.cascadia-community-wrap {
+  position: relative;
+  padding-bottom: rem-calc(48);
+  margin-bottom: rem-calc(60);
+  @include media-breakpoint-up(md) {
+    padding-bottom: rem-calc(80);
+    margin-bottom: rem-calc(120);
+  }
+  &::before {
+    content: "";
+    background: var(--casc-cyan-light-1);
+    border-radius: 0 0 250px;
+    position: absolute;
+    top: rem-calc(80);
+    left: 0;
+    width: 50%;
+    height: calc(100% - 80px);
+    z-index: -1;
+    @include media-breakpoint-down(md) {
+      border-radius: 0 0 150px;
+      width: 75%;
+    }
+  }
+  > .container {
+    .casc-blue-dark-1 {
+      background: var(--casc-blue-dark-1) !important;
+    }
+    > .row {
+      @include media-breakpoint-down(md) {
+        margin-left: rem-calc(10);
+        margin-right: rem-calc(-24);
+      }
+    }
+  }
+  .subtitle {
+    line-height: rem-calc(45);
+    font-size: rem-calc(36) !important;
+    @include media-breakpoint-down(md) {
+      font-family: var(--body-font-family);
+      font-weight: $bold !important;
+      line-height: rem-calc(40);
+      font-size: rem-calc(32) !important;
+    }
+  }
+}
+.casc-bg-design {
+  background: var(--casc-blue);
+  border-radius: 0 0 250px;
+  position: relative;
+  color: var(--casc-white) !important;
+  @include media-breakpoint-down(md) {
+    border-radius: 0 0 120px;
+  }
+  &::before {
+    content: "";
+    background: var(--casc-blue-light-1);
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: rem-calc(20);
+    height: 100%;
+    z-index: 0;
+    @include media-breakpoint-down(md) {
+      left: rem-calc(-10);
+      width: rem-calc(10);
+    }
+  }
+  // &::after {
+  //     content: '';
+  //     background: var(--casc-cyan-light-1);
+  //     position: absolute;
+  //     left: 0;
+  //     bottom: -20px;
+  //     width: 50%;
+  //     height: rem-calc(20);
+  //     z-index: 0;
+  // }
+
+  &.blue {
+    background: var(--casc-blue);
+  }
+  &.blue-sapphire {
+    background: var(--casc-blue-sapphire);
+  }
+  .btn {
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+  }
+  .content_area {
+    max-height: auto;
+    @include media-breakpoint-down(md) {
+      max-height: 100px;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+    }
+  }
+  .show-content {
+    max-height: none;
+  }
+  .read-more {
+    display: none;
+    text-decoration: none;
+    margin-bottom: 1px solid var(--casc-white);
+  }
+}
+.casc-bg-design-padding {
+  padding: rem-calc(110 40 120) !important;
+  @include media-breakpoint-down(md) {
+    padding: rem-calc(70 20 50) !important;
+  }
+}
+.casc-img-design {
+  border-radius: 0 70px;
+  @include media-breakpoint-up(md) {
+    border-radius: 0 100px;
+  }
+}
+.community-img-design {
+  position: relative;
+  display: inline-block;
+  margin-bottom: rem-calc(24);
+  @include media-breakpoint-down(md) {
+    margin-right: rem-calc(15);
+  }
+  @include media-breakpoint-up(lg) {
+    width: 94%;
+  }
+  &::after {
+    content: "";
+    border: 2px solid #41afe4;
+    border-radius: rem-calc(20);
+    position: absolute;
+    bottom: -15px;
+    right: -15px;
+    width: rem-calc(143);
+    height: rem-calc(208);
+    z-index: 0;
+  }
+  img {
+    border-radius: rem-calc(12);
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+    @include media-breakpoint-up(lg) {
+      width: 100%;
+    }
+  }
+}
+.community-block {
+  @include media-breakpoint-up(md) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  h5 {
+    font-family: var(--body-font-family);
+    margin-bottom: rem-calc(16);
+  }
+  .btn-white {
+    height: rem-calc(58);
+  }
+  a {
+    color: var(--casc-white);
+    font-size: rem-calc(18px);
+    &.ex-underline {
+      --line: var(--casc-white);
+      --color: var(--casc-white);
+      svg {
+        left: -12px;
+      }
+    }
+    &:hover {
+      --line: var(--casc-yellow-light);
+      --color: var(--casc-yellow-light);
+      color: var(--casc-yellow-light);
+    }
+  }
+  &:hover {
+    .community-img-design {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+.casc-about-wrap {
+  font-size: rem-calc(18);
+  line-height: rem-calc(32);
+  @include media-breakpoint-down(md) {
+    font-size: rem-calc(16);
+    line-height: rem-calc(26);
+  }
+}

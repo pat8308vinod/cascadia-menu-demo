@@ -1,0 +1,9 @@
+.cascadia-program-wrap {
+    padding-bottom: rem-calc(40);
+    @include media-breakpoint-up(lg) {
+      padding-bottom: rem-calc(88);
+    }
+}
+.programs-copy {
+    color: var(--casc-gray-1);
+}

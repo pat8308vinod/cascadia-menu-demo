@@ -1,0 +1,296 @@
+/**
+ * Package Name: _cssvars.scss
+ * Subpackage: cascadia
+ * Author: Raven Developers
+ * Author URI: 
+ * Description: SCSS
+ * Author: Sridhar
+ * Created: 05/05/23
+ * Version: 1.0
+ * License: Creative Commons 3.0 Attribution
+ * License URI: 
+ * Tags: app
+**/
+
+@use "sass:math";
+
+@import './utils';
+
+:root {
+  --body-font-family: #{$font-family-body};
+  --heading-font-family: #{$font-family-headings};
+  --heading-secondary-font-family: #{$font-family-headings-secondary};
+  --body-text-color: #{$casc_gray-darker};
+
+  // Custom theme colors (less verbose)
+  @each $color, $value in $casc-colors {
+    --#{$color}: #{$value};
+  }
+
+  // Margin spacings
+  @each $space, $value in $spacers {
+    --size-#{$space}: #{$value};
+  }
+
+  // Font sizes
+  @each $size, $value in $font-sizes {
+    --fz-#{$size}: #{$value};
+  }
+
+  --animate-duration: 1.2s;
+  --animate-easing: cubic-bezier(.4, 0, .2, 1);
+  --animate-distance: 100px;
+
+}
+
+.container {
+  @include media-breakpoint-down(md) {
+    padding-left: rem-calc(24) !important;
+    padding-right: rem-calc(24) !important;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: var(--body-font-family) !important;
+  color: var(--body-text-color) !important;
+}
+
+.body-24 {
+  font-size: var(--fz-24);
+}
+
+.body-20 {
+  font-size: var(--fz-20);
+}
+
+.body-18 {
+  font-size: var(--fz-18);
+  line-height: rem-calc(32)
+}
+
+.body-16 {
+  font-size: var(--fz-16);
+}
+
+.body-14 {
+  font-size: var(--fz-14);
+}
+.line-height-32{
+  line-height: rem-calc(32)
+}
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+  // color: var(--body-text-color) !important;
+}
+
+h1, .h1 {
+  font-size: rem-calc(64) !important;
+  font-family: var(--heading-font-family)!important;
+  font-weight: $bold !important;
+  @include media-breakpoint-down(md) {
+    font-size: rem-calc(36) !important;
+  }
+}
+h2, .h2 {
+  font-size: rem-calc(56) !important;
+  font-family: var(--heading-font-family)!important;
+  font-weight: $bold !important;
+  @include media-breakpoint-down(md) {
+    font-size: rem-calc(24) !important;
+  }
+}
+h3, .h3 {
+  font-size: rem-calc(36) !important;
+  font-family: var(--heading-font-family)!important;
+  font-weight: $bold !important;
+  line-height: 125%;
+  margin-bottom: rem-calc(16);
+  @include media-breakpoint-down(md) {
+    font-size: rem-calc(32) !important;
+    font-family: var(--heading-secondary-font-family);
+  }
+}
+h4, .h4 {
+  font-size: rem-calc(32) !important;
+  font-family: var(--body-font-family);
+  font-weight: $bold !important;
+  margin-bottom: rem-calc(16) !important;
+}
+h5, .h5 {
+  font-size: rem-calc(24) !important;
+  font-family: var(--heading-secondary-font-family)!important;
+  font-weight: $bold !important;
+}
+h6, .h6 {
+  font-size: rem-calc(20) !important;
+  font-family: var(--heading-secondary-font-family)!important;
+  font-weight: $bold !important;
+}
+.h7 {
+  font-size: rem-calc(20);
+  font-family: var(--heading-secondary-font-family)!important;
+  font-weight: $semibold;
+}
+.heading-font {
+  font-family: var(--heading-font-family)!important;
+}
+
+.body-font {
+  font-family: var(--body-font-family);
+}
+
+a {
+  color: var(--casc-gray-darker);
+  &.ex-underline {
+      --line: var(--casc-gray-darker);
+      --color: var(--casc-gray-darker);
+      svg {
+          left: -12px;
+      }
+  }
+  &:hover {
+      color: var(--casc-orange-1);
+      &.ex-underline {
+          --line: var(--casc-orange-1);
+          --color: var(--casc-orange-1);
+      }
+  }
+}
+.ex-underline {
+  > span {
+    display: inline-block;
+  }
+}
+main {
+  a {
+    color: var(--casc-blue-dark);
+    &:hover {
+      color: var(--casc-orange-1);
+    }
+  }
+}
+.button-18 {
+  @extend .body-18;
+  text-transform: uppercase;
+}
+
+.menu-text-14 {
+  @extend .body-14;
+  text-transform: uppercase;
+}
+
+.menu-text-22 {
+  font-family: var(--heading-font-family);
+  font-size: var(--fz-22);
+}
+
+.menu-text-16 {
+  font-family: var(--heading-font-family);
+  font-size: var(--fz-16);
+}
+
+.caption {
+  font-family: var(--body-font-family);
+  font-size: var(--fz-20);
+  font-weight: 400;
+}
+.caption-small-16 {
+  font-family: var(--heading-font-family);
+  font-size: var(--fz-16);
+  font-weight: 600;
+}
+
+.caption-small-14 {
+  font-family: var(--heading-font-family);
+  font-size: var(--fz-14);
+  font-weight: 600;
+}
+
+.img-responsive {
+  max-width: 100%;
+}
+.px-0 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.justify-center {
+  display: flex;
+  justify-content: center;
+}
+.btn, .btn-link {
+  img {
+    max-width: 24px;
+  }
+}
+.regular {
+  font-weight: $regular !important;
+}
+.bold {
+  font-weight: $bold !important;
+}
+.semibold {
+  font-weight: $semibold !important;
+}
+
+.subhead-line-bottom-left {
+  position: relative;
+  padding-bottom: rem-calc(30);
+  margin-bottom: rem-calc(24);
+  @include media-breakpoint-down(md) {
+    padding-bottom: rem-calc(30);
+  }
+  &::after {
+    content: '';
+    background: var(--casc-sky-blue);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 81px;
+    height: 9px;
+  }
+}
+
+.subhead-line-bottom-center {
+  position: relative;
+  padding-bottom: rem-calc(34);
+  margin-bottom: rem-calc(20);
+  @include media-breakpoint-down(md) {
+    padding-bottom: rem-calc(30);
+  }
+  &::after {
+    content: '';
+    background: var(--casc-sky-blue);
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 81px;
+    height: 9px;
+    transform: translateX(-50%);
+  }
+}
+
+.eyebrow {
+  font-family: var(--heading-font-family);
+  font-size: rem-calc(20);
+  font-weight: $bold;
+  color: var(--casc-blue-dark-1);
+  text-transform: uppercase;
+  margin-bottom: rem-calc(16);
+}
+.bg-cyan-blue, .bg-featured {
+  background-color: var(--casc-cyan-light-1);
+}
+.bg-dark-cerulean-blue {
+  background-color: var(--casc-blue-dark-1);
+}
+
+.heading-font {
+  font-family: var(--heading-font-family);
+}
+
+.tagline {
+  @extend .heading-font;
+  line-height: rem-calc(28);
+  color: var(--casc-gray-1);
+}

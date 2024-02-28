@@ -1,0 +1,71 @@
+.cascadia-students-analytics {
+    background: var(--casc-blue-dark-1);
+    box-shadow: 0px 24px 34px 0px rgba(0, 0, 0, 0.4);
+    border-top: 10px solid var(--casc-blue-light-1);
+    color: var(--casc-white);
+    padding: rem-calc(30 24);
+
+    margin-bottom: rem-calc(40);
+
+    @include media-breakpoint-up(md) {
+        box-shadow: 0px 34px 44px 0px rgba(0, 0, 0, 0.4);
+
+        margin-bottom: rem-calc(60);
+        padding: rem-calc(50 40 45 15);
+    }
+
+    .head {
+        display: flex;
+        gap: 10px;
+        margin-bottom: rem-calc(24);
+        @include media-breakpoint-down(md) {
+            margin-bottom: rem-calc(10);
+            gap: 20px;
+        }
+        > span {
+            > img {
+                @include media-breakpoint-down(md) {
+                    max-width: 60px;
+                }
+            }
+        }
+    }
+
+    .h2 {
+        font-family: var(--heading-font-family);
+        @include media-breakpoint-down(md) {
+            font-size: rem-calc(36) !important;
+            margin-bottom: 0 !important;
+            line-height: inherit;
+        }
+    }
+    .copy {
+        font-size: rem-calc(24);
+        font-weight: $bold;
+        line-height: rem-calc(32);
+        @include media-breakpoint-down(md) {
+            font-size: rem-calc(16);
+            font-weight: 500;
+        }
+    }
+
+    > div {
+        border-right: 1px solid rgba(255, 255, 255, 0.15);
+        padding-left: rem-calc(24);
+        @include media-breakpoint-down(md) {
+            padding: rem-calc(0 0 26);
+            margin-bottom: rem-calc(20);
+            border-right: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        &:last-child {
+            border-right: none;
+            @include media-breakpoint-down(md) {
+                border-bottom: none;
+                padding-bottom: rem-calc(0);
+                margin-bottom: rem-calc(0);
+            }
+        }
+    }
+}

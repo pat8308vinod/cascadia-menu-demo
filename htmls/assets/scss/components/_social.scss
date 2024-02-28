@@ -1,0 +1,22 @@
+.social-block {
+  background: var(--casc-blue-sapphire);
+  padding: rem-calc(64) 0;
+  h3 {
+    font-family: var(--heading-font-family);
+    font-size: rem-calc(36);
+    line-height: rem-calc(45);
+    color: var(--casc-white);
+    &:after {
+      content: "";
+      width: 81px;
+      height: 9px;
+      background: var(--casc-sky-blue);
+      display: block;
+      margin: rem-calc(24) auto rem-calc(32);
+    }
+  }
+  a {
+    display: inline-block;
+    padding: rem-calc(8);
+  }
+}

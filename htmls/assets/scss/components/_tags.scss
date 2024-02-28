@@ -1,0 +1,15 @@
+.tags-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem-calc(18);
+    margin-bottom: rem-calc(24);
+    @include media-breakpoint-down(md) {
+        margin-bottom: rem-calc(20);
+    }
+    .tag {
+        padding: rem-calc(10 15);
+        background: rgba(36, 64, 142, 0.1);
+        border-radius: rem-calc(8);
+        color: var(--casc-blue);
+    }
+}

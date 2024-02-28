@@ -1,0 +1,370 @@
+// CSS Expansion Panels Accordion - large Starts...//
+.cascadia-accordion-main {
+  .accordion-item {
+    border: none;
+    margin-bottom: rem-calc(24);
+    @include media-breakpoint-down(md) {
+      margin-bottom: rem-calc(20);
+    }
+    outline: none !important;
+    .accordion-header {
+      margin-bottom: 0 !important;
+    }
+    .accordion-collapse {
+      background: var(--casc-cyan-light-1);
+    }
+    &:first-of-type {
+      border-top-left-radius: rem-calc(0) !important;
+    }
+    .accordion-body {
+      padding: rem-calc(24);
+      @include media-breakpoint-down(md) {
+        padding: rem-calc(12 18);
+      }
+      h3 {
+        margin-top: rem-calc(0);
+      }
+      h5 {
+        margin-top: rem-calc(24);
+        @include media-breakpoint-down(md) {
+          margin-top: rem-calc(16);
+          @include media-breakpoint-down(md) {
+            font-size: rem-calc(18);
+          }
+        }
+      }
+      p {
+        line-height: 32px;
+        margin-bottom: rem-calc(16) !important;
+      }
+      a {
+        color: var(--casc-blue-dark);
+        display: inline !important;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        font-weight: $semibold;
+        border-bottom: 2px solid var(--casc-sky-blue);
+        &:hover {
+          color: var(--casc-orange-1);
+        }
+      }
+    }
+    .accordion-button {
+      font-size: rem-calc(20);
+      @include media-breakpoint-down(md) {
+        font-size: rem-calc(24);
+      }
+      font-weight: 700;
+      padding: rem-calc(16 24);
+      @include media-breakpoint-down(md) {
+        padding: rem-calc(12 18);
+      }
+      background: #044e72;
+      color: var(--casc-white);
+      border-bottom-left-radius: rem-calc(20) !important;
+      border-top-right-radius: rem-calc(20) !important;
+      border-top-left-radius: rem-calc(0) !important;
+      border-bottom-right-radius: rem-calc(0) !important;
+      border: none;
+      outline: none !important;
+      &:not(.collapsed) {
+        color: var(--casc-white);
+        background: var(--casc-blue);
+        border-bottom-left-radius: rem-calc(0) !important;
+      }
+      &:focus {
+        box-shadow: none;
+      }
+      &::after {
+        filter: brightness(0) saturate(100%) invert(96%) sepia(0%) saturate(0%)
+          hue-rotate(96deg) brightness(103%) contrast(104%);
+      }
+    }
+  }
+}
+// CSS Expansion Panels Accordion - large Starts  End....//
+
+.link-yellow-light-hover {
+  &:hover {
+    color: var(--casc-yellow-light) !important;
+  }
+}
+
+//CSS For Paragraph with Lots of Body Copy Start...//
+.cascadia-paragraph-copy {
+  .col-content {
+    @include media-breakpoint-up(md) {
+      margin-bottom: rem-calc(48);
+    }
+    h5 {
+      @include media-breakpoint-up(md) {
+        margin-bottom: rem-calc(16);
+      }
+    }
+    p {
+      font-size: rem-calc(18);
+      line-height: 32px;
+      color: var(--casc-gray-darker) !important;
+    }
+    img {
+      border-top: 18px solid var(--casc-blue);
+      border-bottom: 18px solid var(--casc-blue);
+      margin-top: rem-calc(6);
+      @include media-breakpoint-down(md) {
+        margin-bottom: rem-calc(24);
+      }
+    }
+    a {
+      color: var(--casc-blue-dark);
+      display: inline !important;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      font-weight: $semibold;
+      border-bottom: 2px solid var(--casc-sky-blue);
+      &:hover {
+        color: var(--casc-orange-1);
+      }
+    }
+  }
+}
+//CSS For Paragraph with Lots of Body Copy End...//
+
+.bg-casc-cyan-light-1 {
+  background: var(--casc-cyan-light-1) !important;
+  padding-bottom: rem-calc(48);
+  padding-top: rem-calc(64);
+  @include media-breakpoint-down(md) {
+    padding-bottom: rem-calc(24);
+    padding-top: rem-calc(32);
+  }
+}
+
+//CSS cascadia tier-3 page table start...//
+.casc-table {
+  table {
+    margin-top: rem-calc(16);
+    border-color: var(--casc-blue);
+    border-width: 2px !important;
+    border: solid;
+    th,
+    td {
+      padding: rem-calc(24);
+      @include media-breakpoint-down(md) {
+        padding: rem-calc(16);
+      }
+      text-align: center;
+      border-width: 2px !important;
+      border: solid;
+      vertical-align: middle;
+    }
+    th {
+      background: var(--casc-cyan-light-1);
+      font-size: rem-calc(18);
+      font-weight: $semibold;
+    }
+    td {
+      font-size: rem-calc(18);
+      font-weight: $normal;
+    }
+  }
+}
+//CSS cascadia tier-3 page table End....//
+
+//CSS cascadia tier-3 page Title and Unordered List Starts....//
+.cascadia-tier-3-page-ulist {
+  .ulist-content {
+    @include media-breakpoint-up(lg) {
+      padding-right: rem-calc(64);
+    }
+
+    h3 {
+      margin-bottom: rem-calc(64);
+      @include media-breakpoint-down(md) {
+        margin-bottom: rem-calc(24);
+      }
+    }
+    h6 {
+      line-height: rem-calc(28);
+      font-family: var(--heading-font-family) !important;
+      font-weight: $semibold !important;
+      margin-bottom: rem-calc(32);
+      @include media-breakpoint-down(md) {
+        margin-bottom: rem-calc(16);
+      }
+    }
+    p {
+      font-size: rem-calc(18);
+      line-height: 32px;
+      color: var(--casc-gray-darker) !important;
+    }
+  }
+}
+.ulist {
+  padding-left: 0;
+  li {
+    background: var(--casc-cyan-light-1);
+    border-left: 12px solid var(--casc-green);
+    padding: rem-calc(24);
+    color: var(--casc-blue-dark);
+    list-style-type: none;
+    font-weight: $semibold;
+    line-height: rem-calc(26);
+    margin-bottom: rem-calc(24);
+    &:last-child {
+      margin-bottom: rem-calc(0);
+    }
+  }
+}
+
+.bg-casc-cyan-light-1 {
+  .cascadia-tier-3-page-ulist {
+    .ulist {
+      li {
+        background: var(--casc-white);
+      }
+    }
+  }
+}
+
+//CSS cascadia tier-3 page Title and Unordered List End..//
+
+.media-gallery-2 {
+  h3 {
+    margin-bottom: rem-calc(48);
+    @include media-breakpoint-down(md) {
+      margin-bottom: rem-calc(24);
+    }
+  }
+  .community-block {
+    h5 {
+      margin-top: rem-calc(4);
+    }
+    p {
+      @include media-breakpoint-up(md) {
+        padding-right: rem-calc(24);
+      }
+    }
+  }
+  .community-img-design {
+    width: 92%;
+    @include media-breakpoint-down(md) {
+      width: 95%;
+    }
+    img {
+      border-radius: rem-calc(12);
+    }
+  }
+}
+
+/* IMAGE GRID STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.image-grid figure {
+  margin-bottom: 0;
+}
+
+.image-grid img {
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.2s;
+}
+
+.image-grid a:hover img {
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.35);
+}
+
+/* LIGHTBOX STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.lightbox-modal .modal-content {
+  background: var(--lightbox);
+}
+
+.lightbox-modal .btn-close {
+  position: absolute;
+  top: 20px;
+  right: 18px;
+  font-size: 1.2rem;
+  z-index: 10;
+}
+
+.lightbox-modal .modal-body {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  text-align: center;
+}
+
+.lightbox-modal img {
+  width: auto;
+  max-height: 100vh;
+  max-width: 100%;
+}
+
+.lightbox-modal .carousel-caption {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(36, 36, 36, 0.75);
+}
+
+.lightbox-modal .carousel-control-prev,
+.lightbox-modal .carousel-control-next {
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
+  width: auto;
+}
+
+.lightbox-modal .carousel-control-prev {
+  left: 10px;
+}
+
+.lightbox-modal .carousel-control-next {
+  right: 10px;
+}
+
+.casc-tab {
+  .nav-pills {
+    @include media-breakpoint-down(md) {
+      display: flex;
+      justify-content: space-between !important;
+      flex-wrap: nowrap;
+    }
+    .nav-item {
+      // width: 20%;
+      @include media-breakpoint-down(md) {
+        // width: 50%;
+      }
+      .nav-link {
+        width: 100%;
+        padding: rem-calc(16) rem-calc(16);
+        font-family: var(--body-font-family);
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1.625rem;
+        color: var(--casc-white);
+        opacity: 0.5;
+        &:hover,
+        .nav-link:focus {
+          color: var(--casc-white) !important;
+          opacity: 1;
+        }
+        &.active,
+        .nav-pills .show > .nav-link {
+          color: var(--casc-white);
+          background-color: transparent !important;
+          border-bottom: 7px solid var(--casc-sky-blue);
+          border-radius: rem-calc(0);
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .tab-content {
+    background: var(--casc-cyan-light-1);
+    .tab-pane {
+      padding: rem-calc(32);
+      @include media-breakpoint-down(md) {
+        padding: rem-calc(16);
+      }      
+    }
+  }
+}

@@ -1,0 +1,60 @@
+@use "sass:map";
+
+$casc-colors: (
+  "casc-blue": #24408e,
+  "casc-blue-dark": #132b6c,
+  "casc-blue-darker": #031547,
+  "casc-blue-dark-1": #044e72,
+  "casc-blue-sapphire": #025a85,
+  "casc-blue-light": #00598b,
+  "casc-blue-light-2": #0870a4,
+  "casc-green": #abbf47,
+  "casc-green-dark": #849820,
+  "casc-green-darker": #6a7c11,
+  "casc-red": #e02829,
+  "casc-yellow": #f89820,
+  "casc-cyan-dark": #09aa95,
+  "casc-orange": #f04b24,
+  "casc-orange-1": #c43b16,
+  "casc-purple": #412f80,
+  "casc-pink": #e55191,
+  "casc-gray": #6e6e6e,
+  "casc-gray-light": #f2f3f5,
+  "casc-gray-darker": #010122,
+  "casc-white": #ffffff,
+  "casc-black": #000000,
+  "casc-cyan-light-1": #effbfe,
+  "casc-blue-light-1": #d3e1ed,
+  "casc-gray-1": #404041,
+  "casc-orange-dark": #983909,
+  "casc-yellow-light": #e9b323,
+  "casc-sky-blue": #41afe4,
+);
+
+// Rebranding
+$casc_blue: map.get($casc-colors, "casc-blue");
+$casc_blue-dark: map.get($casc-colors, "casc-blue-dark");
+$casc_blue-dark-1: map.get($casc-colors, "casc-blue-dark-1");
+$casc_blue-sapphire: map.get($casc-colors, "casc-blue-sapphire");
+$casc_blue-darker: map.get($casc-colors, "casc-blue-darker");
+$casc_blue-lite: map.get($casc-colors, "casc-blue-light");
+$casc_blue-lite-1: map.get($casc-colors, "casc-blue-light-1");
+$casc_blue-lite-2: map.get($casc-colors, "casc-blue-light-2");
+$casc_green: map.get($casc-colors, "casc-green");
+$casc_green-dark: map.get($casc-colors, "casc-green-dark");
+$casc_green-darker: map.get($casc-colors, "casc-green-darker");
+$casc_red: map.get($casc-colors, "casc-red");
+$casc_yellow: map.get($casc-colors, "casc-yellow");
+$casc_cyan-dark: map.get($casc-colors, "casc-cyan-dark");
+$casc_orange: map.get($casc-colors, "casc-orange");
+$casc_orange-1: map.get($casc-colors, "casc-orange-1");
+$casc_purple: map.get($casc-colors, "casc-purple");
+$casc_pink: map.get($casc-colors, "casc-pink");
+$casc_gray: map.get($casc-colors, "casc-gray");
+$casc_gray-light: map.get($casc-colors, "casc-gray-light");
+$casc_gray-darker: map.get($casc-colors, "casc-gray-darker");
+$casc_cyan-light-1: map.get($casc-colors, "casc-cyan-light-1");
+$casc_gray-1: map.get($casc-colors, "casc-gray-1");
+$casc_orange-dark: map.get($casc-colors, "casc-orange-dark");
+$casc_yellow-light: map.get($casc-colors, "casc-yellow-light");
+$casc_sky-blue: map.get($casc-colors, "casc-sky-blue");

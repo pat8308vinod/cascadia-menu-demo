@@ -1,0 +1,34 @@
+.blue-title-block {
+  background: var(--casc-blue-sapphire);
+  padding: rem-calc(64) 0;
+  h3 {
+    color: var(--casc-white);
+    &:after {
+      content: "";
+      width: 81px;
+      height: 9px;
+      background: var(--casc-sky-blue);
+      display: block;
+      margin: rem-calc(24) 0 rem-calc(32);
+    }
+  }
+  p {
+    font-family: var(--heading-font-family);
+    font-size: rem-calc(20);
+    line-height: rem-calc(28);
+    font-weight: $semibold;
+    color: var(--casc-white);
+  }
+  a {
+    font-size: rem-calc(18);
+    line-height: rem-calc(36);
+    font-weight: $semibold;
+    color: var(--casc-white);
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: 2px solid var(--casc-sky-blue);
+    &:hover {
+      color: var(--casc-sky-blue);
+    }
+  }
+}

@@ -1,0 +1,177 @@
+.cascadia-level-three-menu {
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+  border-top: 1px solid #d8d8d8;
+  border-bottom: 1px solid #d8d8d8;
+  background: #fff;
+  //box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin-left: 1px;
+  position: sticky;
+  top: rem-calc(94);
+  z-index: 5;
+  .parent-link {
+    border-right: 1px solid #d8d8d8;
+    padding-left: 0;
+    padding-right: rem-calc(36);
+    display: inline-block;
+    // margin-right: rem-calc(36);
+    opacity: 1;
+    transition: display 0.5s ease-in-out, opacity 0.8s ease-in-out;
+    a {
+      text-decoration: none;
+      color: var(--casc-orange-1);
+      font-weight: 500;
+      display: inline;
+      &:hover {
+        color: var(--casc-orange-1);
+      }
+    }
+  }
+  .breadcrumb-item + .breadcrumb-item {
+    &::before {
+      display: none;
+    }
+  }
+  .breadcrumb {
+    margin-bottom: 0 !important;
+    transition: display 0.8s ease-in-out, margin-right 0.8s ease-in-out;
+    .breadcrumb-item {
+      padding-left: rem-calc(36);
+      &:first-child {
+        padding-left: rem-calc(36);
+      }
+      &:hover {
+        .dropdown-menu {
+          display: block !important;
+        }
+        .nav-link {
+          color: var(--casc-orange-1);
+          border-bottom-color: var(--casc-orange-1);
+        }
+        .dropdown-toggle {
+          color: var(--casc-orange-1);
+          border-bottom-color: var(--casc-orange-1);
+        }
+      }
+      .nav-link {
+        text-decoration: none;
+        color: var(--casc-gray-darker);
+        font-weight: 500;
+        display: inline;
+        padding-bottom: rem-calc(16);
+        border-bottom: 3px solid rgba(0, 0, 0, 0);
+        &.active {
+          color: var(--casc-sky-blue);
+          border-bottom-color: var(--casc-sky-blue);
+        }
+      }
+
+      .dropdown-toggle {
+        font-weight: 500;
+        padding-bottom: rem-calc(16);
+        margin-left: rem-calc(-4);
+        border-bottom: 3px solid rgba(0, 0, 0, 0);
+        &::after {
+          content: none; /* Remove the default caret icon */
+        }
+        i {
+          font-size: rem-calc(12);
+          margin-left: rem-calc(8);
+        }
+        &:hover {
+          color: var(--casc-orange-1);
+        }
+      }
+
+      .dropdown-menu {
+        margin-top: rem-calc(16);
+        .dropdown-item {
+          font-size: rem-calc(14);
+          font-weight: 500;
+          &:hover {
+            color: var(--casc-sky-blue);
+          }
+        }
+      }
+    }
+  }
+  .breadcrumb-item.dropdown {
+    padding-left: rem-calc(30) !important;
+  }
+  .custom-dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    /* Position below the more button */
+    z-index: 1000;
+    /* Adjust z-index as needed */
+    right: 0;
+    border: 1px solid #d8d8d8;
+    padding: rem-calc(8);
+    margin-top: rem-calc(17);
+    background: var(--casc-white);
+    li {
+      list-style: none;
+      margin-left: 10px;
+      a {
+        font-weight: 400;
+        font-size: rem-calc(14) !important;
+        margin-bottom: rem-calc(8);
+        display: inline;
+        &:hover {
+          color: var(--casc-orange-1);
+        }
+      }
+    }
+
+    .accordion-toggle {
+      font-size: rem-calc(16) !important;
+      font-weight: 500;
+      text-transform: capitalize !important;
+      height: auto !important;
+      min-width: 14rem !important;
+      background-color: transparent !important;
+      cursor: default;
+
+      a {
+        text-decoration: none !important;
+        border-bottom: 3px solid rgba(0, 0, 0, 0);
+        text-align: left;
+        &:hover {
+          color: var(--casc-orange-1);
+          border-bottom-color: var(--casc-orange-1);
+        }
+      }
+    }
+    .dropdown-toggle {
+      font-weight: 500;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-decoration: none !important;
+      &::after {
+        content: none; /* Remove the default caret icon */
+      }
+      i {
+        font-size: rem-calc(12);
+        margin-left: rem-calc(4);
+      }
+      .fas.fa-minus[aria-hidden="true"] {
+        color: var(--casc-orange-1); /* Change color as per your requirement */
+      }
+    }
+  }
+  .more-button {
+    cursor: pointer;
+    font-size: rem-calc(16) !important;
+    font-weight: 500;
+    &:hover,
+    &.active {
+      color: var(--casc-orange-1);
+    }
+    i {
+      font-size: rem-calc(13) !important;
+    }
+  }
+}
